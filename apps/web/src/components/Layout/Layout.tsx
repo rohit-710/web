@@ -2,8 +2,9 @@ import { ReactElement, useMemo } from 'react';
 import localFont from '@next/font/local';
 import { useRouter } from 'next/router';
 
-import { Footer } from './Footer/Footer';
 import { Nav } from './Nav/Nav';
+import { Footer } from './Footer/Footer';
+import { CookieBanner } from '../CookieBanner/CookieBanner';
 
 const coinbaseDisplay = localFont({
   src: [
@@ -75,6 +76,7 @@ export function Layout({ children }: LayoutProps) {
       <Nav color={color} />
       {children}
       <Footer />
+      <CookieBanner />
     </div>
   );
 }
